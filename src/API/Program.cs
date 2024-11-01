@@ -7,7 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://*:5112");
+builder.WebHost.UseUrls("http://*:80");
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);

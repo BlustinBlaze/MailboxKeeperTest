@@ -13,7 +13,7 @@ RUN dotnet publish ./src/API/API.csproj -c Release -o out
 # Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-EXPOSE 5112
+EXPOSE 80
 COPY --from=build-env /app/out .
 
 # Change this if your API DLL has a different name
