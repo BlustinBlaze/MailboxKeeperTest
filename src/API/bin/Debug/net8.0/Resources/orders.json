@@ -1,0 +1,23 @@
+{
+    "customer": {
+        "firstname": "Jordan",
+        "lastname": "Rioux",
+        "email": "jordan@rioux.com"
+    },
+    "order": {
+        "country": "Canada",
+        "street": "123 fake street",
+        "city": "Sorel-Tracy",
+        "zipCode": "J3R1L1",
+        "total": 420.69,
+        "items": [{
+            "price": 20.69,
+            "description": "C# In Depth (book)",
+            "quantity": 1
+        }, {
+            "price": 100,
+            "description": "Clean Code (book)",
+            "quantity": 4
+        }]
+    }
+}

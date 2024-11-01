@@ -1,0 +1,32 @@
+services:
+  api:
+    build:
+        context: .
+        dockerfile: ./.docker/asp/Dockerfile
+    container_name: 'api'
+    restart: 'always'
+    links:
+      - database
+    ports:
+      - "5112:5112"
+    environment:
+      DB_HOST: 'database'
+  
+  database:
+    build:
+      context: .
+      dockerfile: ./.docker/services/postgres/Dockerfile
+    container_name: 'api_database'
+    restart: 'always'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d/sql
+      - ./sql/database.sql:/docker-entrypoint-initdb.d/1-database.sql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: 'api'
+      POSTGRES_USER: 'dev'
+      POSTGRES_PASSWORD: 'dev'
+
+volumes:
+  sql:
