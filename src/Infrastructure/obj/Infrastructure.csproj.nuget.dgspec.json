@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj": {}
+    "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj": {
+    "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj",
+        "projectUniqueName": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj",
+        "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj",
         "packagesPath": "/Users/blustin2gmail.com/.nuget/packages/",
-        "outputPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/obj/",
+        "outputPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/blustin2gmail.com/.nuget/NuGet/NuGet.Config"
@@ -68,14 +68,14 @@
         }
       }
     },
-    "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj": {
+    "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj",
+        "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj",
         "packagesPath": "/Users/blustin2gmail.com/.nuget/packages/",
-        "outputPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/obj/",
+        "outputPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/blustin2gmail.com/.nuget/NuGet/NuGet.Config"
@@ -91,8 +91,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj": {
-                "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj"
+              "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj": {
+                "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj"
               }
             }
           }

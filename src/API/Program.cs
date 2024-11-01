@@ -1,9 +1,6 @@
 using System.Text;
 using API;
 using Application;
-using HiveMQtt.Client;
-using HiveMQtt.Client.Options;
-using HiveMQtt.MQTT5.ReasonCodes;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -94,35 +91,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             }
         };
     });
-
-var options = new HiveMQClientOptions();
-options.Host = "https://test.mosquitto.org";
-options.Port = 8883;
-options.UserName = "mailbox";
-options.Password = "keeper";
-var client = new HiveMQClient(options);
-Console.WriteLine($"Connecting to {options.Host}:{options.Port}");
-
-//Connect
-HiveMQtt.Client.Results.ConnectResult connectResult;
-try
-{
-    connectResult = await client.ConnectAsync().ConfigureAwait(false);
-    if (connectResult.ReasonCode == ConnAckReasonCode.Success)
-    {
-        Console.WriteLine($"Connect successful: {connectResult}");
-    }
-    else
-    {
-        Console.WriteLine($"Connect failed: {connectResult}");
-        Environment.Exit(-1);
-    }
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Connect failed: {ex.Message}");
-    Environment.Exit(-1);
-}
 
 var app = builder.Build();
 

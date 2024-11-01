@@ -21,6 +21,7 @@ services:
     volumes:
       - ./sql:/docker-entrypoint-initdb.d/sql
       - ./sql/database.sql:/docker-entrypoint-initdb.d/1-database.sql
+      - ./sql/init-mocks.sql:/docker-entrypoint-initdb.d/2-data-mocks.sql
     ports:
       - "5432:5432"
     environment:

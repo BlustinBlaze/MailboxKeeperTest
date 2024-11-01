@@ -218,11 +218,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj",
+      "projectUniqueName": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj",
+      "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj",
       "packagesPath": "/Users/blustin2gmail.com/.nuget/packages/",
-      "outputPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/obj/",
+      "outputPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/blustin2gmail.com/.nuget/NuGet/NuGet.Config"

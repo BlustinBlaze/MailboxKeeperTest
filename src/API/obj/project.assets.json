@@ -18,32 +18,6 @@
           }
         }
       },
-      "HiveMQtt/0.23.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.1",
-          "NLog": "5.2.3",
-          "System.IO.Pipelines": "7.0.0",
-          "Websocket.Client": "5.1.2"
-        },
-        "compile": {
-          "lib/net8.0/HiveMQtt.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/HiveMQtt.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "contentFiles": {
-          "contentFiles/any/net8.0/NLog.config": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          }
-        }
-      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -730,19 +704,6 @@
           }
         }
       },
-      "Microsoft.IO.RecyclableMemoryStream/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.OpenApi/1.4.3": {
         "type": "package",
         "compile": {
@@ -769,19 +730,6 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
-        }
-      },
-      "NLog/5.2.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NLog.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NLog.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Npgsql/8.0.2": {
@@ -1044,28 +992,12 @@
       "System.IO.Pipelines/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.IO.Pipelines.dll": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
           "lib/net7.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Reactive/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/System.Reactive.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/System.Reactive.dll": {
             "related": ".xml"
           }
         },
@@ -1149,39 +1081,20 @@
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
-      "System.Threading.Channels/8.0.0": {
+      "System.Threading.Channels/7.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/System.Threading.Channels.dll": {
+          "lib/net7.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Threading.Channels.dll": {
+          "lib/net7.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "Websocket.Client/5.1.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "Microsoft.IO.RecyclableMemoryStream": "3.0.0",
-          "System.Reactive": "6.0.0",
-          "System.Threading.Channels": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/Websocket.Client.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Websocket.Client.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Application/1.0.0": {
@@ -1230,32 +1143,6 @@
         "icon.png",
         "lib/net6.0/AutoMapper.dll",
         "lib/net6.0/AutoMapper.xml"
-      ]
-    },
-    "HiveMQtt/0.23.0": {
-      "sha512": "tesB+smr/2Cv2WVsBrXkpQ0U9xLYYRj283UyMNfBdNKuJXMdBhMcSMY3KTHuo3QvZW4b5UdzlYSuEn0/4oH8FQ==",
-      "type": "package",
-      "path": "hivemqtt/0.23.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "README.md",
-        "content/NLog.config",
-        "contentFiles/any/net6.0/NLog.config",
-        "contentFiles/any/net7.0/NLog.config",
-        "contentFiles/any/net8.0/NLog.config",
-        "hivemqtt.0.23.0.nupkg.sha512",
-        "hivemqtt.nuspec",
-        "lib/net6.0/HiveMQtt.dll",
-        "lib/net6.0/HiveMQtt.pdb",
-        "lib/net6.0/HiveMQtt.xml",
-        "lib/net7.0/HiveMQtt.dll",
-        "lib/net7.0/HiveMQtt.pdb",
-        "lib/net7.0/HiveMQtt.xml",
-        "lib/net8.0/HiveMQtt.dll",
-        "lib/net8.0/HiveMQtt.pdb",
-        "lib/net8.0/HiveMQtt.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -2965,24 +2852,6 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.IO.RecyclableMemoryStream/3.0.0": {
-      "sha512": "irv0HuqoH8Ig5i2fO+8dmDNdFdsrO+DoQcedwIlb810qpZHBNQHZLW7C/AHBQDgLLpw2T96vmMAy/aE4Yj55Sg==",
-      "type": "package",
-      "path": "microsoft.io.recyclablememorystream/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/net6.0/Microsoft.IO.RecyclableMemoryStream.xml",
-        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/netstandard2.0/Microsoft.IO.RecyclableMemoryStream.xml",
-        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.dll",
-        "lib/netstandard2.1/Microsoft.IO.RecyclableMemoryStream.xml",
-        "microsoft.io.recyclablememorystream.3.0.0.nupkg.sha512",
-        "microsoft.io.recyclablememorystream.nuspec"
-      ]
-    },
     "Microsoft.OpenApi/1.4.3": {
       "sha512": "rURwggB+QZYcSVbDr7HSdhw/FELvMlriW10OeOzjPT7pstefMo7IThhtNtDudxbXhW+lj0NfX72Ka5EDsG8x6w==",
       "type": "package",
@@ -3012,30 +2881,6 @@
         "mono.texttemplating.3.0.0-preview-0052-g5d0f76c785.nupkg.sha512",
         "mono.texttemplating.nuspec",
         "readme.md"
-      ]
-    },
-    "NLog/5.2.3": {
-      "sha512": "rHTNRtQF5qYqLutSR9ldUWXglKym/KA1R6GKw4JtDvza8i5+kgfmeKH75Ccn1noeJIOjHLXorphMxKk3EiN2tg==",
-      "type": "package",
-      "path": "nlog/5.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "N.png",
-        "lib/net35/NLog.dll",
-        "lib/net35/NLog.xml",
-        "lib/net45/NLog.dll",
-        "lib/net45/NLog.xml",
-        "lib/net46/NLog.dll",
-        "lib/net46/NLog.xml",
-        "lib/netstandard1.3/NLog.dll",
-        "lib/netstandard1.3/NLog.xml",
-        "lib/netstandard1.5/NLog.dll",
-        "lib/netstandard1.5/NLog.xml",
-        "lib/netstandard2.0/NLog.dll",
-        "lib/netstandard2.0/NLog.xml",
-        "nlog.5.2.3.nupkg.sha512",
-        "nlog.nuspec"
       ]
     },
     "Npgsql/8.0.2": {
@@ -3415,34 +3260,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Reactive/6.0.0": {
-      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
-      "type": "package",
-      "path": "system.reactive/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/net6.0-windows10.0.19041/_._",
-        "build/net6.0/_._",
-        "buildTransitive/net6.0-windows10.0.19041/_._",
-        "buildTransitive/net6.0/_._",
-        "icon.png",
-        "lib/net472/System.Reactive.dll",
-        "lib/net472/System.Reactive.xml",
-        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
-        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
-        "lib/net6.0/System.Reactive.dll",
-        "lib/net6.0/System.Reactive.xml",
-        "lib/netstandard2.0/System.Reactive.dll",
-        "lib/netstandard2.0/System.Reactive.xml",
-        "lib/uap10.0.18362/System.Reactive.dll",
-        "lib/uap10.0.18362/System.Reactive.pri",
-        "lib/uap10.0.18362/System.Reactive.xml",
-        "readme.md",
-        "system.reactive.6.0.0.nupkg.sha512",
-        "system.reactive.nuspec"
-      ]
-    },
     "System.Reflection.Metadata/7.0.0": {
       "sha512": "MclTG61lsD9sYdpNz9xsKBzjsmsfCtcMZYXz/IUr2zlhaTaABonlr1ESeompTgM+Xk+IwtGYU7/voh3YWB/fWw==",
       "type": "package",
@@ -3599,16 +3416,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Threading.Channels/8.0.0": {
-      "sha512": "CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
+    "System.Threading.Channels/7.0.0": {
+      "sha512": "qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "type": "package",
-      "path": "system.threading.channels/8.0.0",
+      "path": "system.threading.channels/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Threading.Channels.targets",
         "buildTransitive/net462/_._",
@@ -3620,37 +3436,13 @@
         "lib/net6.0/System.Threading.Channels.xml",
         "lib/net7.0/System.Threading.Channels.dll",
         "lib/net7.0/System.Threading.Channels.xml",
-        "lib/net8.0/System.Threading.Channels.dll",
-        "lib/net8.0/System.Threading.Channels.xml",
         "lib/netstandard2.0/System.Threading.Channels.dll",
         "lib/netstandard2.0/System.Threading.Channels.xml",
         "lib/netstandard2.1/System.Threading.Channels.dll",
         "lib/netstandard2.1/System.Threading.Channels.xml",
-        "system.threading.channels.8.0.0.nupkg.sha512",
+        "system.threading.channels.7.0.0.nupkg.sha512",
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "Websocket.Client/5.1.2": {
-      "sha512": "ZE5VoUCIYbfACGmXxgfD96i4W0wyBk0JEwIViyPpvxdk/pNfzh2SX9BgEj8fTqNaxlFl0bUTWq1UUvR/c18BTQ==",
-      "type": "package",
-      "path": "websocket.client/5.1.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon-modern.png",
-        "icon.png",
-        "lib/net6.0/Websocket.Client.dll",
-        "lib/net6.0/Websocket.Client.xml",
-        "lib/net7.0/Websocket.Client.dll",
-        "lib/net7.0/Websocket.Client.xml",
-        "lib/net8.0/Websocket.Client.dll",
-        "lib/net8.0/Websocket.Client.xml",
-        "lib/netstandard2.1/Websocket.Client.dll",
-        "lib/netstandard2.1/Websocket.Client.xml",
-        "websocket.client.5.1.2.nupkg.sha512",
-        "websocket.client.nuspec"
       ]
     },
     "Application/1.0.0": {
@@ -3667,7 +3459,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Application >= 1.0.0",
-      "HiveMQtt >= 0.23.0",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
@@ -3681,11 +3472,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/API/API.csproj",
+      "projectUniqueName": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/API/API.csproj",
+      "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/API.csproj",
       "packagesPath": "/Users/blustin2gmail.com/.nuget/packages/",
-      "outputPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/API/obj/",
+      "outputPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/blustin2gmail.com/.nuget/NuGet/NuGet.Config"
@@ -3701,11 +3492,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj": {
-              "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj"
+            "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj": {
+              "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj"
             },
-            "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj"
+            "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj"
             }
           }
         }
@@ -3720,10 +3511,6 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "HiveMQtt": {
-            "target": "Package",
-            "version": "[0.23.0, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.10, )"

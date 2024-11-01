@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7bmr0KvuI0LJLTjriAacSvUb+iwKeWo8uRN1H1ex+4KcSjdscyVGyG8jcwQO0c+NFty7wka4znaG3fyBN8kLEg==",
+  "dgSpecHash": "A9JZ2EsLrAlEUyUUDvqyesrHc53CF64n7gfa8Twu7ewQ5Qcp/q6lckN3InHPU01EZDmEyyNDg7McnEAn8t0e3A==",
   "success": true,
-  "projectFilePath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Application/Application.csproj",
+  "projectFilePath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Application/Application.csproj",
   "expectedPackageFiles": [
     "/Users/blustin2gmail.com/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.3.24172.9/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",

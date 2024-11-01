@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b9jEbhUWBRpTIux8CJpOP5aDYT3l+pQJFtnMB3Cj52dITEXVBJHUWjNCkwnDNXO5Z72Op2CVs1w0yvf4Sh92mw==",
+  "dgSpecHash": "pWMsrv0YUT3c+2PEDr1iXInynN+MiZg+TB26AkYuRiuiyIj58cSxzspYDd1RrCHczj+MJd+oCX9msJCxH8wN2w==",
   "success": true,
-  "projectFilePath": "/Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/Infrastructure/Infrastructure.csproj",
+  "projectFilePath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/blustin2gmail.com/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.9.0.0-preview.3.24172.4.nupkg.sha512",
