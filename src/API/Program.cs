@@ -1,6 +1,8 @@
 using System.Text;
 using API;
 using Application;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -69,13 +71,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? string.Empty)),
         };
         
-        
         options.Events = new JwtBearerEvents
         {
             OnMessageReceived = context =>
             {
                 var accessToken = context.Request.Query["access_token"];
-
                 var path = context.HttpContext.Request.Path;
                 if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/notifications"))
                 {
@@ -91,6 +91,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             }
         };
     });
+
+//add firebase of (FirebaseAdmin)
+FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mailboxkeeper-c5507-firebase-adminsdk-lpw3g-5a9a209839.json")),
+});
 
 var app = builder.Build();
 

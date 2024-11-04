@@ -76,4 +76,28 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
         }
         return user;
     }
+    
+    public void UpdateUser(string fcmtoken, int id)
+    {
+        var user = GetUserById(id);
+        if (user == null)
+        {
+            logger.LogError("User with id {id} not found.", id);
+            return;
+        }
+        user.Fcmtoken = fcmtoken;
+        db.SaveChanges();
+        logger.LogInformation("User updated successfully.");
+    }
+    
+    public User GetUserByMailboxId(int id)
+    {
+        var user = db.Users.FirstOrDefault(u => u.IdMailbox == id);
+        if (user == null)
+        {
+            logger.LogError("User with mailbox id {id} not found.", id);
+            return null;
+        }
+        return user;
+    }
 }

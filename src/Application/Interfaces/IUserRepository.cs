@@ -9,4 +9,6 @@ public interface IUserRepository
     User? GetUserByEmail(string email);
     User UpdateMailboxUser(int idMailbox, int id);
     User GetMailboxIdByUser(int id);
+    void UpdateUser(string fcmtoken, int id);
+    User GetUserByMailboxId(int id);
 }

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FirebaseAdmin" Version="3.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0-preview.3.24172.4">

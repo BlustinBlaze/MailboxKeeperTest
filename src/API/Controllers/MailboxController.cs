@@ -4,6 +4,7 @@ using System.Text;
 using Application.DTOs.Notifications;
 using Application.Exceptions;
 using Application.Interfaces;
+using FirebaseAdmin.Messaging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +15,7 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("/v1/[controller]")]
-public class MailboxController(IConfiguration configuration ,IMailboxRepository mailboxRepository, ILogger<MailboxController> logger, IHubContext<NotificationHub, INotificationClient> hubContext) : ControllerBase
+public class MailboxController(IConfiguration configuration, IMailboxRepository mailboxRepository, IUserRepository userRepository, ILogger<MailboxController> logger, IHubContext<NotificationHub, INotificationClient> hubContext) : ControllerBase
 {
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [HttpGet]
@@ -70,19 +71,44 @@ public class MailboxController(IConfiguration configuration ,IMailboxRepository 
     
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [HttpPut]
-    public ActionResult UpdateMailbox(UpdateMailboxRequest updateMailbox)
+    public async Task<ActionResult> UpdateMailbox(UpdateMailboxRequest updateMailbox)
     {
         logger.LogInformation("Updating mailbox");
         try
         {
-            var userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId))
+            var mailboxId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(mailboxId))
             {
                 logger.LogWarning("User ID is not present in the token");
                 return Unauthorized("User ID is missing");
             }
             var newMailbox = mailboxRepository.UpdateMailbox(updateMailbox);
-            hubContext.Clients.Group(userId).ReceiveMailbox(newMailbox);
+            await hubContext.Clients.Group(mailboxId).ReceiveMailbox(newMailbox);
+
+            var user = userRepository.GetUserByMailboxId(newMailbox.Id);
+            var message = new Message()
+            {
+                Notification = new Notification
+                {
+                    Title = "Mailbox Updated",
+                    Body = "Your mailbox has been updated."
+                },
+                Token = user.Fcmtoken
+            };
+            
+            var messaging = FirebaseMessaging.DefaultInstance;
+            var result = await messaging.SendAsync(message);
+            if (!string.IsNullOrEmpty(result))
+            {
+                // Message was sent successfully
+                Console.WriteLine("Message sent successfully!");
+            }
+            else
+            {
+                // There was an error sending the message
+                Console.WriteLine("Error sending the message.");
+            }
+            
             return StatusCode(200);
         }
         catch (NotFoundException ex)

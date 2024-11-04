@@ -386,3 +386,13 @@
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/obj/Debug/net8.0/API.pdb
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/obj/Debug/net8.0/API.genruntimeconfig.cache
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/obj/Debug/net8.0/ref/API.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/mailboxkeeper-c5507-firebase-adminsdk-lpw3g-5a9a209839.json
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/FirebaseAdmin.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Google.Api.Gax.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Google.Api.Gax.Rest.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Google.Apis.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Google.Apis.Auth.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Google.Apis.Core.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/System.Management.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Management.dll

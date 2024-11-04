@@ -13,6 +13,8 @@ public partial class User
 
     public bool? Notification { get; set; }
 
+    public string? Fcmtoken { get; set; }
+
     public int IdMailbox { get; set; }
 
     public virtual Mailbox IdMailboxNavigation { get; set; } = null!;

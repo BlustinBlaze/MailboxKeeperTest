@@ -47,6 +47,10 @@ public class AccountController(IConfiguration configuration, ILogger<AccountCont
             {
                 return BadRequest("Invalid password");
             }
+            if (userInfo.Fcmtoken != null)
+            {
+                userRepository.UpdateUser(userInfo.Fcmtoken, user.Id);
+            }
             logger.LogInformation("User logged in successfully.");
             return Ok(new { Token = GenerateJwtToken(user) });
         } catch (Exception ex) {

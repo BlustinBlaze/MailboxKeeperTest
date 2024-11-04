@@ -18,6 +18,7 @@ CREATE TABLE users
     email      VARCHAR(255) NOT NULL,
     password   VARCHAR(255) NOT NULL,
     notification BOOLEAN DEFAULT TRUE,
+    fcmToken   VARCHAR(255) DEFAULT '',
     id_mailbox INTEGER NOT NULL,
     FOREIGN KEY (id_mailbox) REFERENCES mailbox (id)
 );

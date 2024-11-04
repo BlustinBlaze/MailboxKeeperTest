@@ -75,6 +75,10 @@ public partial class ApiContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .HasColumnName("email");
+            entity.Property(e => e.Fcmtoken)
+                .HasMaxLength(255)
+                .HasDefaultValueSql("''::character varying")
+                .HasColumnName("fcmtoken");
             entity.Property(e => e.IdMailbox).HasColumnName("id_mailbox");
             entity.Property(e => e.Notification)
                 .HasDefaultValue(true)

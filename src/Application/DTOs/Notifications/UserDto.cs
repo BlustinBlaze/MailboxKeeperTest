@@ -14,5 +14,8 @@ public class UserDto
 
     public bool? Notification { get; set; }
     
+    [StringLength(255)]
+    public string? Fcmtoken { get; set; }
+    
     public int IdMailbox { get; set; }
 }
