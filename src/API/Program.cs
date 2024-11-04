@@ -95,7 +95,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //add firebase of (FirebaseAdmin)
 FirebaseApp.Create(new AppOptions()
 {
-    Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mailboxkeeper-c5507-firebase-adminsdk-lpw3g-5a9a209839.json")),
+    Credential = GoogleCredential.FromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mailboxkeeper-firebase-adminsdk-key.json")),
 });
 
 var app = builder.Build();
