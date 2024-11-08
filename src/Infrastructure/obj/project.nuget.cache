@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pWMsrv0YUT3c+2PEDr1iXInynN+MiZg+TB26AkYuRiuiyIj58cSxzspYDd1RrCHczj+MJd+oCX9msJCxH8wN2w==",
+  "dgSpecHash": "k9i41SMLU0r4hb+GJHEHhjmHedkMVJezb2eFQ6s9et1Clv2T4972VCal/FqdFHr1NS0Oe0mghn/HehtIPpKMaQ==",
   "success": true,
   "projectFilePath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/blustin2gmail.com/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/blustin2gmail.com/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.9.0.0-preview.3.24172.4.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.abstractions.9.0.0-preview.3.24172.4.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.analyzers.9.0.0-preview.3.24172.4.nupkg.sha512",

@@ -24,8 +24,15 @@ public class MailboxController(IConfiguration configuration, IMailboxRepository 
         logger.LogInformation("Getting mailboxes");
         try
         {
-            var mailboxes = mailboxRepository.GetMailboxes();
-            hubContext.Clients.All.ReceiveHistory(mailboxes);
+            var userId = HttpContext.User.FindFirst(ClaimTypes.SerialNumber)?.Value;
+            var mailboxId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(mailboxId))
+            {
+                logger.LogWarning("User ID or Mailbox ID is not present in the token");
+                return Unauthorized("User ID or Mailbox ID is missing");
+            }
+            var mailboxes = mailboxRepository.GetMailboxes(userId);
+            hubContext.Clients.Group(mailboxId).ReceiveHistory(mailboxes);
             return StatusCode(200, mailboxes);
         }
         catch (NotFoundException ex)
@@ -42,7 +49,7 @@ public class MailboxController(IConfiguration configuration, IMailboxRepository 
         try
         {
             var mailbox = mailboxRepository.GetMailboxById(id);
-            hubContext.Clients.All.ReceiveMailbox(mailbox);
+            hubContext.Clients.Group(mailbox.Id.ToString()).ReceiveMailbox(mailbox);
             return StatusCode(200, mailbox);
         }
         catch (NotFoundException ex)

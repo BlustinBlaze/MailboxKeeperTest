@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KsmzR9k5cFWGWrExqoTZqm/VRmouMR0wFQEmZX/ku1XCTJwruBRf7eG7skqPR7yNQs8lqeBBaZrrPv9yoG37WA==",
+  "dgSpecHash": "kqUZsZznt47TdQEiBi1oVKVD3vEBc+8BUEFsv1Pla1TcQe9iZLA6s9JhjUA6LykPo3DCHlZQcbwE3DbKM9qGdA==",
   "success": true,
   "projectFilePath": "/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/blustin2gmail.com/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/blustin2gmail.com/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/firebaseadmin/3.0.1/firebaseadmin.3.0.1.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/google.api.gax/4.8.0/google.api.gax.4.8.0.nupkg.sha512",
     "/Users/blustin2gmail.com/.nuget/packages/google.api.gax.rest/4.8.0/google.api.gax.rest.4.8.0.nupkg.sha512",

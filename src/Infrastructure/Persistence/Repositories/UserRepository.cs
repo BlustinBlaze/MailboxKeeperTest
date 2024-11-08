@@ -17,6 +17,7 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
             logger.LogError("User with email {email} already exists.", user.Email);
             return null;
         }
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
         db.Users.Add(user);
         db.SaveChanges();
         logger.LogInformation("User added to database successfully.");
@@ -99,5 +100,12 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
             return null;
         }
         return user;
+    }
+
+    public bool VerifyPassword(string email, string password)
+    {
+        var user = GetUserByEmail(email);
+        if (user == null) return false;
+        return BCrypt.Net.BCrypt.Verify(password, user.Password);
     }
 }

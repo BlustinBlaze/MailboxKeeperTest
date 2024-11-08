@@ -11,5 +11,6 @@ public class MailboxProfile: Profile
         //CreateMap<MailboxResponse, Mailbox>();
         CreateMap<Mailbox, MailboxResponse>();
         CreateMap<CreateMailboxRequest, Mailbox>();
+        CreateMap<History, HistoryResponse>();
     }
 }

@@ -43,9 +43,9 @@ public class AccountController(IConfiguration configuration, ILogger<AccountCont
             {
                 return BadRequest("User not found");
             }
-            if (user.Password != userInfo.Password)
+            if (userRepository.VerifyPassword(userInfo.Email, userInfo.Password) == false)
             {
-                return BadRequest("Invalid password");
+                return BadRequest("Invalid user or password");
             }
             if (userInfo.Fcmtoken != null)
             {
