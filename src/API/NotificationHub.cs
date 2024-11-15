@@ -12,7 +12,7 @@ public class NotificationHub() : Hub<INotificationClient>
     {
         Console.WriteLine("Client connected");
         var userId = Context.User?.FindFirst(ClaimTypes.SerialNumber)?.Value;
-        Console.WriteLine("userrrr: " + userId);
+        Console.WriteLine("User: " + userId);
         if (userId != null)
         {
             await Groups.AddToGroupAsync(Context.ConnectionId, userId);

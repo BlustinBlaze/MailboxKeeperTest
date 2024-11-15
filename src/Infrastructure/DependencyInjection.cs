@@ -14,10 +14,9 @@ public static class DependencyInjection
         services.AddDbContext<ApiContext>(
             options => options.UseNpgsql("Name=ConnectionString:Api"));
         
-        services.AddScoped<IOrdersRepository, OrderRepository>();
-        services.AddScoped<IStatsRepository, StatsRepository>();
         services.AddScoped<IMailboxRepository, MailboxRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<ITestRepository, TestRepository>();
         return services;
     }
 }
