@@ -256,7 +256,6 @@
 /Users/blustin2gmail.com/RiderProjects/MailBoxKeeper/src/API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/appsettings.Development.json
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/appsettings.json
-/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/order_stats.json
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/API
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/API.deps.json
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/API.runtimeconfig.json
@@ -395,6 +394,6 @@
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/System.Management.dll
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Management.dll
-/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/mailboxkeeper-c5507-firebase-adminsdk-lpw3g-ce6dc8acc2.json
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/test.json
 /Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/blustin2gmail.com/Documents/GitHub/MailboxKeeperTest/src/API/bin/Debug/net8.0/mailboxkeeper-c5507-firebase-adminsdk-lpw3g-ce6dc8acc2.json

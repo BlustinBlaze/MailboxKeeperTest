@@ -91,6 +91,19 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
         logger.LogInformation("User updated successfully.");
     }
     
+    public void LogoutUser(int id)
+    {
+        var user = GetUserById(id);
+        if (user == null)
+        {
+            logger.LogError("User with id {id} not found.", id);
+            return;
+        }
+        user.Fcmtoken = null;
+        db.SaveChanges();
+        logger.LogInformation("User logged out successfully.");
+    }
+    
     public User GetUserByMailboxId(int id)
     {
         var user = db.Users.FirstOrDefault(u => u.IdMailbox == id);

@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.SignalR;
 namespace API;
 
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-public class NotificationHub() : Hub<INotificationClient>
+public class NotificationHub(IUserRepository userRepository) : Hub<INotificationClient>
 {
     public override async Task OnConnectedAsync()
     {
@@ -27,6 +28,7 @@ public class NotificationHub() : Hub<INotificationClient>
         if (userId != null)
         {
             await Groups.RemoveFromGroupAsync(Context.ConnectionId, userId);
+            userRepository.LogoutUser(int.Parse(userId));
         }
         await base.OnDisconnectedAsync(exception);
     }
