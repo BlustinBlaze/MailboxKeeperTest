@@ -93,6 +93,12 @@ public class MailboxController(IConfiguration configuration, IMailboxRepository 
             await hubContext.Clients.Group(mailboxId).ReceiveMailbox(newMailbox);
 
             var user = userRepository.GetUserByMailboxId(newMailbox.Id);
+            logger.LogInformation("user notification is {notification}", user.Notification);
+            if (user.Fcmtoken == null || user.Fcmtoken == "" || user.Notification != true)
+            {
+                logger.LogInformation("User has no FCM token or notification disabled.");
+                return StatusCode(200);
+            }
             var message = new Message()
             {
                 Notification = new Notification

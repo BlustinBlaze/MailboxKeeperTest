@@ -59,6 +59,23 @@ public class AccountController(IConfiguration configuration, ILogger<AccountCont
         }
     }
     
+    [HttpPost]
+    [Route("Logout")]
+    public ActionResult Logout(int id)
+    {
+        logger.LogInformation("Logging out user with id {id}", id);
+        try
+        {
+            userRepository.LogoutUser(id);
+            logger.LogInformation("User logged out successfully.");
+            return Ok();
+        } catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while logging out the user.");
+            return StatusCode(500, ex.Message);
+        }
+    }
+    
     [Route("UpdateMailbox")]
     [HttpPost]
     public ActionResult UpdateMailboxUser(int idMailbox, int id)

@@ -93,6 +93,7 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
     
     public void LogoutUser(int id)
     {
+        logger.LogInformation("User id: {id}", id);
         var user = GetUserById(id);
         if (user == null)
         {
@@ -101,7 +102,7 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
         }
         user.Fcmtoken = null;
         db.SaveChanges();
-        logger.LogInformation("User logged out successfully.");
+        logger.LogInformation("Fcm token removed successfully.");
     }
     
     public User GetUserByMailboxId(int id)
