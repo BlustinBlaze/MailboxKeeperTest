@@ -12,9 +12,8 @@ public class MailboxRepository(ApiContext db, IMapper mapper, ILogger<MailboxRep
     //private static readonly SemaphoreSlim FileLock = new SemaphoreSlim(1);
     public List<HistoryResponse> GetMailboxes(string userId)
     {
-        //return db.Histories.Select(history => mapper.Map<HistoryResponse>(history)).ToList();
         var userIdInt = int.Parse(userId);
-        return db.Histories.Where(h => h.IdMailbox == userIdInt).Select(history => mapper.Map<HistoryResponse>(history)).ToList();
+        return db.Histories.Where(h => h.IdMailbox == userIdInt).OrderByDescending(h => h.Id).Select(history => mapper.Map<HistoryResponse>(history)).ToList();
     }
     
     public MailboxResponse GetMailboxById(int id)

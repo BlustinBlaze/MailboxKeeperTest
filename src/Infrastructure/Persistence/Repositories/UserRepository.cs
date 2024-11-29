@@ -122,4 +122,18 @@ public class UserRepository(ApiContext db, IMapper mapper, ILogger<UserRepositor
         if (user == null) return false;
         return BCrypt.Net.BCrypt.Verify(password, user.Password);
     }
+    
+    public bool UpdateNotification(bool notification, int id)
+    {
+        var user = GetUserById(id);
+        if (user == null)
+        {
+            logger.LogError("User with id {id} not found.", id);
+            return false;
+        }
+        user.Notification = notification;
+        db.SaveChanges();
+        logger.LogInformation("Notification updated successfully.");
+        return true;
+    }
 }

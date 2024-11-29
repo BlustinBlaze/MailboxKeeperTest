@@ -3,9 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Application.DTOs.Notifications;
 using Application.Interfaces;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
 using Microsoft.IdentityModel.Tokens;
 
 namespace API.Controllers;
@@ -114,6 +112,48 @@ public class AccountController(IConfiguration configuration, ILogger<AccountCont
         } catch (Exception ex)
         {
             logger.LogError(ex, "An error occurred while retrieving the mailbox.");
+            return StatusCode(500, ex.Message);
+        }
+    }
+
+    [Route("Notification")]
+    [HttpGet]
+    public ActionResult GetNotificationConfig(int id)
+    {
+        logger.LogInformation("Getting notification configuration for user with id {id}", id);
+        try
+        {
+            var user = userRepository.GetUserByMailboxId(id);
+            if (user == null)
+            {
+                return BadRequest("User not found");
+            }
+            logger.LogInformation("Notification configuration retrieved successfully.");
+            return Ok(user.Notification);
+        } catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while retrieving the notification configuration.");
+            return StatusCode(500, ex.Message);
+        }
+    }
+    
+    [Route("Notification")]
+    [HttpPost]
+    public ActionResult UpdateNotificationConfig(int id, bool notification)
+    {
+        logger.LogInformation("Updating notification configuration for user with id {id}", id);
+        try
+        {
+            var success = userRepository.UpdateNotification(notification, id);
+            if (!success)
+            {
+                return BadRequest("User not found");
+            }
+            logger.LogInformation("Notification configuration updated successfully.");
+            return Ok();
+        } catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while updating the notification configuration.");
             return StatusCode(500, ex.Message);
         }
     }

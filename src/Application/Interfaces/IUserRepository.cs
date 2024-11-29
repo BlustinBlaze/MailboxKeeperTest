@@ -13,4 +13,5 @@ public interface IUserRepository
     void LogoutUser(int userId);
     User GetUserByMailboxId(int id);
     bool VerifyPassword(string email, string password);
+    bool UpdateNotification(bool notification, int id);
 }
